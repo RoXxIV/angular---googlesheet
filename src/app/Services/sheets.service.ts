@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ApiToken } from './apiToken';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,7 @@ export class SheetsService {
   constructor(private http: HttpClient) { }
 
   public getSheets(): Observable<any> {
-    const sheetno = 'od6';
-    const sheetid = '1tcIvXledcUE7vuymRm6aYrpR1cNyecR6CEWquo4Gzh4';
-    const url = `https://spreadsheets.google.com/feeds/list/${sheetid}/${sheetno}/public/values?alt=json`;
+    const url = `https://spreadsheets.google.com/feeds/list/${ApiToken.sheetid}/${ApiToken.sheetno}/public/values?alt=json`;
 
     return this.http.get(url)
           .pipe(
