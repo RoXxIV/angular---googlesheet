@@ -15,6 +15,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ResultComponent } from './Components/Charts/result/result.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     }),
     MatPaginatorModule,
     NgbModule,
+    MatIconModule
 
   ],
   providers: [],
