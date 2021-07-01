@@ -15,14 +15,21 @@ export class HeaderComponent implements OnInit {
     const target = document.querySelector('.tw');
 
     const options = {
-    loop: true
+    loop: true,
+    typeSpeed: 100,
+    deleteSpeed: 100,
   };
 
     const writer = new Typewriter(target, options);
     writer
   .strings(
-    400,
-    'Quelle est votre language préférée ?',
+    600,
+    'Javascript',
+    'Python',
+    'Php',
+    'Java',
+    'C#',
+    'Swift'
 
   )
   .start();

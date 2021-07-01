@@ -25,7 +25,7 @@ export class ResultComponent implements OnInit {
         this.resultList = data;
         this.options  = {
             title: {
-              text: 'Resultats du vote',
+              text: 'Résultats du vote',
               subtext: '😃',
               x: 'center'
             },
@@ -46,12 +46,12 @@ export class ResultComponent implements OnInit {
                 radius: [30, 110],
                 roseType: 'area',
                 data: [
-                  { value: this.resultList.filter(data => data['language'] == 'C#').length, name: 'C#' },
-                  { value: this.resultList.filter(data => data['language'] == 'Python').length, name: 'Python' },
-                  { value: this.resultList.filter(data => data['language'] == 'Javascript').length, name: 'Javascript' },
-                  { value: this.resultList.filter(data => data['language'] == 'Java').length, name: 'Java' },
-                  { value: this.resultList.filter(data => data['language'] == 'Php').length, name: 'Php' },
-                  { value: this.resultList.filter(data => data['language'] == 'Swift').length, name: 'Swift' },
+                  { value: this.resultList.filter(data => data['langage'] == 'C#').length, name: 'C#' },
+                  { value: this.resultList.filter(data => data['langage'] == 'Python').length, name: 'Python' },
+                  { value: this.resultList.filter(data => data['langage'] == 'Javascript').length, name: 'Javascript' },
+                  { value: this.resultList.filter(data => data['langage'] == 'Java').length, name: 'Java' },
+                  { value: this.resultList.filter(data => data['langage'] == 'Php').length, name: 'Php' },
+                  { value: this.resultList.filter(data => data['langage'] == 'Swift').length, name: 'Swift' },
                 ]
               }
             ]
