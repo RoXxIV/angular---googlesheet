@@ -1,0 +1,31 @@
+<h1>Liste des participants</h1>
+<!--Sheet List-->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Pseudo</th>
+      <th scope="col">Language</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let item of sheetList
+          | slice: (currentPage - 1) * pageSize:currentPage * pageSize
+      "
+    >
+      <th scope="row">{{ item.id }}</th>
+      <td>
+        {{ item.pseudo }}
+      </td>
+      <td>{{ item.language }}</td>
+    </tr>
+  </tbody>
+</table>
+<ngb-pagination
+  [collectionSize]="collectionSize"
+  [pageSize]="pageSize"
+  [(page)]="currentPage"
+>
+</ngb-pagination>
