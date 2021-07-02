@@ -1,4 +1,5 @@
 export const CoolTheme = {
+  
   color: [
     '#b21ab4',
     '#6f0099',
